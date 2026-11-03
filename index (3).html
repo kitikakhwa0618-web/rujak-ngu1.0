@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>รู้จักงู รู้ทันภัย · โรงเรียนสร้างคอมวิทยา</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f1ea;--card:#fff;--ink:#17231f;--soft:#56655e;--sos:#c62a1d;--sosink:#fff;--ok:#1d6b4f;--no:#b3261e;--warn:#ffd54a;--warnink:#2b2200;--line:#d8d4c6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101a16;--card:#192923;--ink:#ecf2ee;--soft:#a3b5ac;--sos:#e0463a;--ok:#5fd0a2;--no:#ff8a80;--warn:#c9a227;--line:#2b4036;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101a16;--card:#192923;--ink:#ecf2ee;--soft:#a3b5ac;--sos:#e0463a;--ok:#5fd0a2;--no:#ff8a80;--warn:#c9a227;--line:#2b4036;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Sarabun,system-ui,sans-serif;font-size:18px;line-height:1.7}
+h1,h2,h3{font-family:Prompt,Sarabun,sans-serif;line-height:1.3;margin:0}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px}
+.review{background:var(--warn);color:var(--warnink);text-align:center;padding:8px 14px;font-size:.9rem}
+header{padding:34px 0 18px}
+h1{font-size:clamp(2.2rem,8vw,3.8rem)}
+.sub{color:var(--soft);margin:8px 0 0}
+.sos{display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:var(--sos);color:var(--sosink);padding:18px;border-radius:14px;margin:20px 0}
+.sos b{font-family:Prompt,sans-serif;font-size:1.25rem;flex:1 1 220px}
+.sos a{background:#fff;color:#c62a1d;font-family:Prompt,sans-serif;font-weight:700;font-size:1.3rem;text-decoration:none;padding:10px 22px;border-radius:999px}
+.sos a.alt{background:transparent;color:#fff;border:2px solid #fff;font-size:1rem}
+a:focus-visible,button:focus-visible{outline:3px solid var(--warn);outline-offset:3px}
+section{padding:28px 0}
+h2{font-size:1.7rem;margin-bottom:10px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.box{background:var(--card);border-radius:12px;padding:16px 18px;border-top:6px solid var(--ok)}
+.box.no{border-top-color:var(--no)}
+.box h3{font-size:1.2rem;margin-bottom:6px}
+.box ol,.box ul{margin:0;padding-left:1.3em}
+.box li{margin:6px 0}
+.note{font-size:.92rem;color:var(--soft);margin-top:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}
+.chips button{font:inherit;font-size:.95rem;padding:6px 16px;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.slot{display:block;width:100%;aspect-ratio:4/3;border:0;border-bottom:2px dashed var(--soft);background:repeating-linear-gradient(135deg,transparent 0 10px,var(--line) 10px 11px);color:var(--soft);font:inherit;cursor:pointer;padding:0}
+.slot img{width:100%;height:100%;object-fit:cover;display:block}
+.cb{padding:12px 16px 16px}
+.cb h3{font-size:1.2rem}
+.tag{display:inline-block;font-size:.8rem;padding:0 10px;border-radius:999px;margin:4px 0 6px;color:#fff}
+.t1{background:#7a3fb0}.t2{background:#a8541a}
+.cb p{margin:4px 0;font-size:.95rem}
+.credit{color:var(--soft);font-size:.82rem!important}
+.sea{background:var(--card);border-left:6px solid var(--warn);padding:16px 18px;border-radius:0 12px 12px 0}
+ul.tips{padding-left:1.2em}ul.tips li{margin:6px 0}
+.src li{font-size:.92rem;margin:4px 0}.src a{color:var(--ok)}
+footer{padding:20px 0 40px;color:var(--soft);font-size:.9rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="review">เวอร์ชันร่าง: เนื้อหาอยู่ระหว่างให้ครูหรือเจ้าหน้าที่สาธารณสุขตรวจก่อนเผยแพร่จริง</div>
+<div class="wrap">
+<header>
+  <h1>รู้จักงู รู้ทันภัย</h1>
+  <p class="sub">คู่มืองูพิษที่พบบ่อยในไทย สำหรับนักเรียนและคนในชุมชน · โรงเรียนสร้างคอมวิทยา</p>
+</header>
+
+<div class="sos" role="alert">
+  <b>ถูกงูกัด? ไปโรงพยาบาลทันที หรือโทร 1669</b>
+  <a href="tel:1669">โทร 1669</a>
+  <a class="alt" href="#firstaid">ดูวิธีปฐมพยาบาล</a>
+</div>
+
+<section id="firstaid">
+  <h2>ถูกงูกัด ทำอย่างไร</h2>
+  <div class="two">
+    <div class="box">
+      <h3>ควรทำ</h3>
+      <ol>
+        <li>ตั้งสติ ให้ผู้ถูกกัดอยู่นิ่งๆ และขยับบริเวณที่ถูกกัดให้น้อยที่สุด</li>
+        <li>ล้างแผลด้วยน้ำสะอาด</li>
+        <li>จดจำลักษณะงูไว้ ถ้าปลอดภัยพอ แต่ไม่ต้องเสียเวลาจับงูมา</li>
+        <li>รีบไปโรงพยาบาลโดยเร็วที่สุด หรือโทร 1669</li>
+        <li>ดามบริเวณที่ถูกกัดให้นิ่ง ตามคำแนะนำของเจ้าหน้าที่สาธารณสุข*</li>
+      </ol>
+    </div>
+    <div class="box no">
+      <h3>ห้ามทำ</h3>
+      <ul>
+        <li>ห้ามกรีดแผล</li>
+        <li>ห้ามใช้ปากดูดพิษ</li>
+        <li>ห้ามจี้ไฟ</li>
+        <li>ห้ามพอกยาหรือสมุนไพรที่แผล</li>
+        <li>ห้ามขันชะเนาะ (รัดแน่นเหนือแผล)</li>
+        <li>ห้ามกินยาแก้ปวดที่มีแอสไพริน</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">กระทรวงสาธารณสุขเตือนว่าการกรีด ดูด จี้ พอกยา และขันชะเนาะ ไม่ช่วยลดพิษ และอาจทำให้ติดเชื้อหรือเนื้อเน่าตายได้ ถ้าถูกงูที่มีพิษต่อระบบประสาท อาการอาจแย่ลงรวดเร็วหลังคลายขันชะเนาะ<br>* ขั้นตอนการดามต้องให้เจ้าหน้าที่สาธารณสุขช่วยตรวจและปรับถ้อยคำก่อนเผยแพร่ ข้อมูลนี้ให้ความรู้เท่านั้น ไม่ใช่การรักษา</p>
+</section>
+
+<section id="guide">
+  <h2>รู้จักงูพิษที่พบบ่อย</h2>
+  <p class="sub" style="margin:0">โรงพยาบาลในสังกัดกระทรวงสาธารณสุขสำรองเซรุ่มแก้พิษงู 7 ชนิดนี้ไว้ เพราะพบบ่อยในแต่ละภูมิภาค</p>
+  <div class="chips" id="chips" role="group" aria-label="กรองตามประเภทพิษ"></div>
+  <div class="grid" id="grid"></div>
+  <p class="note">ห้ามเข้าใกล้หรือจับงูเพื่อถ่ายรูปหรือแยกชนิด ลักษณะที่ระบุเป็นข้อสังเกตเบื้องต้น ไม่ควรใช้ตัดสินความปลอดภัย</p>
+</section>
+
+<section id="prevent">
+  <h2>ป้องกันรอบบ้านและโรงเรียน</h2>
+  <div class="sea">
+    <b>ช่วงที่ควรระวัง:</b> ผู้ถูกงูพิษกัดส่วนใหญ่เกิดในฤดูฝนต่อเนื่องถึงฤดูหนาว
+  </div>
+  <ul class="tips">
+    <li>ถางหญ้ารกและเก็บกองวัสดุรอบอาคาร ไม่ให้เป็นที่ซ่อนตัว</li>
+    <li>ใส่รองเท้าหุ้มข้อเมื่อเดินในหญ้าสูงหรือพื้นที่ชื้นแฉะ</li>
+    <li>ใช้ไฟฉายส่องทางเมื่อเดินตอนค่ำ</li>
+    <li>พบงู ให้ถอยห่างและแจ้งครูหรือผู้ใหญ่ ไม่เข้าไปจับ</li>
+  </ul>
+</section>
+
+<section class="src">
+  <h2>แหล่งข้อมูล</h2>
+  <ul>
+    <li><a href="https://www.thaipbs.or.th/news/content/280457">Thai PBS: ข้อห้ามเมื่อถูกงูกัด (คำแนะนำจากกระทรวงสาธารณสุข)</a></li>
+    <li><a href="https://www.pptvhd36.com/health/care/1695">PPTV: งูกัด ตกใจได้แต่มีสติ</a></li>
+    <li><a href="https://www.sanook.com/health/7913/">Sanook Health: งูกัดต้องทำอย่างไร (ประเภทพิษงู)</a></li>
+  </ul>
+  <p class="note">รูปประกอบทุกรูปจะแสดงชื่อผู้ถ่าย แหล่งที่มา และสัญญาอนุญาต (CC) ใต้ภาพ</p>
+</section>
+<footer>จัดทำโดยโรงเรียนสร้างคอมวิทยา เพื่อให้ความรู้ ไม่ใช่คำแนะนำทางการแพทย์ ถ้าถูกงูกัดให้ไปโรงพยาบาลทันที</footer>
+</div>
+<script>
+var N="พิษต่อระบบประสาท",B="พิษต่อระบบเลือด";
+var data=[
+{n:"งูเห่า",t:N,d:"แผ่แม่เบี้ยได้เมื่อตกใจ",s:"อาการอาจมีหนังตาตก กลืนลำบาก พูดไม่ชัด และหยุดหายใจได้"},
+{n:"งูจงอาง",t:N,d:"เป็นงูพิษที่ตัวใหญ่ แผ่แม่เบี้ยได้",s:"อาการอาจมีหนังตาตก กลืนลำบาก พูดไม่ชัด และหยุดหายใจได้"},
+{n:"งูสามเหลี่ยม",t:N,d:"ลำตัวเป็นสันคล้ายสามเหลี่ยม ลายแถบสลับสี",s:"อาการอาจมีหนังตาตก กลืนลำบาก พูดไม่ชัด และหยุดหายใจได้"},
+{n:"งูทับสมิงคลา",t:N,d:"ลายดำสลับขาว หางเรียวแหลม",s:"ลูกงูมักสับสนกับงูปล้องฉนวนที่มีลายดำขาวคล้ายกัน"},
+{n:"งูกะปะ",t:B,d:"พบบ่อยที่สุดในผู้ป่วยถูกงูกัดของไทย ตามงานวิจัยทางการแพทย์",s:"รอข้อมูลลักษณะเด่นที่ตรวจแล้ว"},
+{n:"งูเขียวหางไหม้",t:B,d:"พบบ่อยรองลงมาในผู้ป่วยถูกงูกัด",s:"รอข้อมูลลักษณะเด่นที่ตรวจแล้ว"},
+{n:"งูแมวเซา",t:B,d:"เป็นหนึ่งในงูที่กัดคนไทยบ่อย",s:"รอข้อมูลลักษณะเด่นที่ตรวจแล้ว"}
+];
+var cur="ทั้งหมด",$=function(i){return document.getElementById(i)};
+function chips(){var c=$("chips");c.innerHTML="";["ทั้งหมด",N,B].forEach(function(k){var b=document.createElement("button");b.textContent=k;b.setAttribute("aria-pressed",k===cur);b.onclick=function(){cur=k;chips();render()};c.appendChild(b)})}
+function render(){var g=$("grid");g.innerHTML="";
+data.filter(function(d){return cur==="ทั้งหมด"||d.t===cur}).forEach(function(d){
+var c=document.createElement("article");c.className="card";
+var s=document.createElement("button");s.className="slot";s.innerHTML="ภาพประกอบ CC ของ"+d.n+"<br>(กดเพื่อดูตัวอย่างจากเครื่อง)";s.setAttribute("aria-label","ใส่ภาพ"+d.n);
+var f=document.createElement("input");f.type="file";f.accept="image/*";f.hidden=true;
+f.onchange=function(){if(f.files[0]){s.innerHTML="";var im=new Image();im.alt=d.n;im.src=URL.createObjectURL(f.files[0]);s.appendChild(im)}};
+s.onclick=function(){f.click()};
+var b=document.createElement("div");b.className="cb";
+var h=document.createElement("h3");h.textContent=d.n;
+var t=document.createElement("span");t.className="tag "+(d.t===N?"t1":"t2");t.textContent=d.t;
+var p1=document.createElement("p");p1.textContent=d.d;
+var p2=document.createElement("p");p2.textContent=d.s;
+var p3=document.createElement("p");p3.className="credit";p3.textContent="เครดิตภาพ: (รอใส่ชื่อผู้ถ่าย แหล่งที่มา และสัญญาอนุญาต)";
+[h,t,p1,p2,p3].forEach(function(e){b.appendChild(e)});
+c.appendChild(s);c.appendChild(f);c.appendChild(b);g.appendChild(c)})}
+chips();render();
+</script>
+</body>
+</html>
